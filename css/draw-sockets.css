@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-j7hq7v");
+  src: url("../fonts/icomoon.eot?#iefix-j7hq7v") format("embedded-opentype"), url("../fonts/icomoon.woff?-j7hq7v") format("woff"), url("../fonts/icomoon.ttf?-j7hq7v") format("truetype"), url("../fonts/icomoon.svg?-j7hq7v#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 12, ../sass/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: white;
+  font-size: 32px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 28, ../sass/_fonts.scss */
+.icon-pencil:before {
+  content: "\e600";
+}
+
+/* line 32, ../sass/_fonts.scss */
+.icon-pen:before {
+  content: "\e601";
+}
+
+/* line 36, ../sass/_fonts.scss */
+.icon-disk:before {
+  content: "\e602";
+}
+
+/* line 40, ../sass/_fonts.scss */
+.icon-remove:before {
+  content: "\e603";
+}
+
+/* line 1, ../sass/_framework.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/_framework.scss */
+body {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  margin: 0;
+}
+
+/* line 11, ../sass/_framework.scss */
+canvas {
+  display: block;
+}
+
+/* line 1, ../sass/_menu.scss */
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  background-color: #333;
+}
+/* line 7, ../sass/_menu.scss */
+.menu:before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 50%;
+  margin: -45px;
+  top: 16px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: border-radius 550ms;
+          transition: border-radius 550ms;
+}
+/* line 16, ../sass/_menu.scss */
+.menu.open-whole:before {
+  border-radius: 0;
+}
+
+/* line 21, ../sass/_menu.scss */
+[id="clear"].button {
+  top: 8px;
+  left: 5px;
+}
+
+/* line 26, ../sass/_menu.scss */
+[id="save"].button {
+  top: 8px;
+  left: 58px;
+}
+
+/* line 31, ../sass/_menu.scss */
+[id="brush-type"].button {
+  top: 8px;
+  right: 64px;
+}
+
+/* line 36, ../sass/_menu.scss */
+.button {
+  position: absolute;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/* line 43, ../sass/_menu.scss */
+.button.highlight {
+  color: #666;
+}
+
+/* line 3, ../sass/_swatch-menu.scss */
+[id="color-menu-button"] {
+  z-index: 5;
+  font-family: sans-serif;
+  position: absolute;
+  width: 71px;
+  height: 71px;
+  left: 50%;
+  margin: -35.5px;
+  top: 16px;
+  line-height: 71px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9ImNpcmNsZSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzcwODA5MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0MzQzNCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-radial-gradient(circle, #708090, #343434);
+  background: radial-gradient(circle, #708090, #343434);
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 15, ../sass/_swatch-menu.scss */
+[id="color-menu-button"]:before {
+  content: "\2630";
+  font-size: 30px;
+}
+
+/* line 21, ../sass/_swatch-menu.scss */
+.drop-down,
+.drop-down + ul {
+  -webkit-animation: drop 100ms forwards cubic-bezier(1, 0, 0.755, 1.47);
+          animation: drop 100ms forwards cubic-bezier(1, 0, 0.755, 1.47);
+}
+
+/* line 26, ../sass/_swatch-menu.scss */
+.rise-up,
+.rise-up + ul {
+  -webkit-animation: rise 300ms forwards cubic-bezier(1, 0, 0.755, 1.47);
+          animation: rise 300ms forwards cubic-bezier(1, 0, 0.755, 1.47);
+}
+
+/* line 31, ../sass/_swatch-menu.scss */
+.rise-up + ul li {
+  pointer-events: none;
+}
+
+/* line 35, ../sass/_swatch-menu.scss */
+li {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  left: 50%;
+  margin: -37.5px;
+  list-style: none;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.755, 1.47);
+          transition: transform 300ms cubic-bezier(1, 0, 0.755, 1.47);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(1) {
+  -webkit-transform: translateX(0px) translateY(-100px);
+          transform: translateX(0px) translateY(-100px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(2) {
+  -webkit-transform: translateX(70.71068px) translateY(-70.71068px);
+          transform: translateX(70.71068px) translateY(-70.71068px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(3) {
+  -webkit-transform: translateX(100px) translateY(0.0px);
+          transform: translateX(100px) translateY(0.0px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(4) {
+  -webkit-transform: translateX(70.71068px) translateY(70.71068px);
+          transform: translateX(70.71068px) translateY(70.71068px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(5) {
+  -webkit-transform: translateX(0.0px) translateY(100px);
+          transform: translateX(0.0px) translateY(100px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(6) {
+  -webkit-transform: translateX(-70.71068px) translateY(70.71068px);
+          transform: translateX(-70.71068px) translateY(70.71068px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(7) {
+  -webkit-transform: translateX(-100px) translateY(0.0px);
+          transform: translateX(-100px) translateY(0.0px);
+}
+/* line 46, ../sass/_swatch-menu.scss */
+.drop-down + ul li:nth-child(8) {
+  -webkit-transform: translateX(-70.71068px) translateY(-70.71068px);
+          transform: translateX(-70.71068px) translateY(-70.71068px);
+}
+
+/* line 53, ../sass/_swatch-menu.scss */
+.selected {
+  z-index: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes rise {
+  /* line 59, ../sass/_swatch-menu.scss */
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+
+  /* line 60, ../sass/_swatch-menu.scss */
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes rise {
+  /* line 59, ../sass/_swatch-menu.scss */
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+
+  /* line 60, ../sass/_swatch-menu.scss */
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes drop {
+  /* line 64, ../sass/_swatch-menu.scss */
+  to {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+@keyframes drop {
+  /* line 64, ../sass/_swatch-menu.scss */
+  to {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+/* line 1, ../sass/_brush-slider.scss */
+.brush-size {
+  top: 4px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  font-weight: bold;
+}
+
+/* line 12, ../sass/_brush-slider.scss */
+input[type="range"] {
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -1;
+  margin: 0;
+  top: 98px;
+  right: -50px;
+  outline: none;
+  background-color: #ccc;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  -webkit-transform: rotate(-90deg) translateY(50px);
+          transform: rotate(-90deg) translateY(50px);
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.755, 1.47);
+          transition: transform 300ms cubic-bezier(1, 0, 0.755, 1.47);
+}
+/* line 27, ../sass/_brush-slider.scss */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #666;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/* line 35, ../sass/_brush-slider.scss */
+input[type="range"].show-slider {
+  -webkit-transform: rotate(-90deg) translateY(0);
+          transform: rotate(-90deg) translateY(0);
+}

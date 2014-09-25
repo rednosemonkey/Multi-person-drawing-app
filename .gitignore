@@ -1,0 +1,4 @@
+.DS_Store
+versions/*
+.sass-cache/*
+node_modules/*

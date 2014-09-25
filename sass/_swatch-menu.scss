@@ -1,0 +1,65 @@
+$timing-function: cubic-bezier(1, 0, 0.755, 1.470);
+
+[id="color-menu-button"] {
+	z-index: 5;
+	font-family: sans-serif;
+	@include center(71px);
+	top: 16px;
+	line-height: 71px;
+	@include background(radial-gradient(circle, slategray, #343434));
+	border-radius: 50%;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	
+	&:before {
+		content: "\2630";
+		font-size: 30px;
+	}
+}
+
+.drop-down,
+.drop-down + ul {
+	animation: drop 100ms forwards $timing-function;
+}
+
+.rise-up,
+.rise-up + ul {
+	animation: rise 300ms forwards $timing-function;
+}
+
+.rise-up + ul li {
+	pointer-events: none;
+}
+
+li {
+	@include center(75px);
+	list-style: none;
+	border: 3px solid white;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 300ms $timing-function;
+	
+	@for $i from 0 through 7 {
+		&:nth-child(#{$i+1}) {
+			
+			.drop-down + ul & {
+				transform: translateX((sin($i * 45deg))*100px) translateY(-(cos($i * 45deg))*100px);
+			}
+		}
+	}
+}
+
+.selected {
+	z-index: 1;
+	transform: scale(1.2);
+}
+
+@keyframes rise {
+	from { transform: translateY(200px); }
+	to { transform: translateY(0); }
+}
+
+@keyframes drop {
+	to { transform: translateY(200px); }
+}

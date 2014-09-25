@@ -1,0 +1,38 @@
+.brush-size {
+	top: 4px;
+	right: 5px; 
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	background-color: white;
+	font-weight: bold;
+}
+
+input[type="range"] {
+	position: absolute;
+	-webkit-appearance: none;
+	z-index: -1;
+	margin: 0;
+	top: 98px; 
+	right: -50px; 
+	outline: none;
+	background-color: #ccc;
+	border-radius: 25px;
+	width: 150px;
+	height: 50px;
+	transform: rotate(-90deg) translateY(50px);
+	transition: transform 300ms $timing-function;
+	
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		background-color: #666;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+
+	&.show-slider {
+		transform: rotate(-90deg) translateY(0);
+	}
+}
