@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			build: {
 				files: {
-					'prod/draw-sockets.css': ['css/draw-sockets.css']
+					'public/css/draw-sockets.css': ['css/draw-sockets.css']
 				}
 			}
 		},

@@ -4,7 +4,7 @@ var canvas = document.getElementById('canvas'),
 		draw = false,
 		cords = [],
 		color,
-		socket = io.connect('http://127.0.0.1:3000');
+		socket = io.connect('http://drawwithfriend.com:8001');
 
 		socket.on('apple', function(data) {
 			drawLine(data.cords, data.lineWidth, data.color);
