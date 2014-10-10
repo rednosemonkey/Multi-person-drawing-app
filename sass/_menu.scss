@@ -9,8 +9,13 @@
 		@include center(90px);
 		top: 16px;
 		border-radius: 50%;
-		background-color: white;
+		background: url("../img/handmadepaper.min.png");
 		transition: border-radius 550ms;
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+			background: url("../img/handmadepaper@2x.min.png");
+			background-size: 50%;
+		}
 	}
 
 	&.open-whole:before {
@@ -39,6 +44,8 @@
 	text-align: center;
 	cursor: pointer;
 	user-select: none;
+	color: #ecf0f1;
+	text-shadow: 1px 1px 0 rgba(black, 0.8);
 	
 	&.highlight {
 		color: #666;

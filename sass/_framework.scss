@@ -6,6 +6,12 @@ body {
 	font-family: sans-serif;
 	text-size-adjust: 100%; 
 	margin: 0;
+	background: url("../img/handmadepaper.min.png");
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background: url("../img/handmadepaper@2x.min.png");
+		background-size: 50%;
+	}
 }
 
 canvas {

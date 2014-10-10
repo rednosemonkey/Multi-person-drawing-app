@@ -8,7 +8,8 @@ $timing-function: cubic-bezier(1, 0, 0.755, 1.470);
 	line-height: 71px;
 	@include background(radial-gradient(circle, slategray, #343434));
 	border-radius: 50%;
-	color: white;
+	color: #ecf0f1;
+	text-shadow: 1px 1px 0 rgba(black, 0.8);
 	text-align: center;
 	cursor: pointer;
 	
@@ -35,7 +36,7 @@ $timing-function: cubic-bezier(1, 0, 0.755, 1.470);
 li {
 	@include center(75px);
 	list-style: none;
-	border: 3px solid white;
+	border: 1px solid white;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: transform 300ms $timing-function;
