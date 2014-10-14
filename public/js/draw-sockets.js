@@ -1,18 +1,23 @@
-var canvas = document.getElementById('canvas'),
-		context = canvas.getContext('2d'),
-		lineWidth = 2,
-		draw = false,
-		cords = [],
-		color,
-		socket = io.connect('http://drawwithfriend.com:8001');
+	var canvasSupport = document.getElementById('canvas-support'),
+			canvas = document.createElement('canvas'),
+			context = canvas.getContext('2d');
 
-		socket.on('apple', function(data) {
-			drawLine(data.cords, data.lineWidth, data.color);
-		});
-
+	canvas.setAttribute('id', 'canvas');
+	canvasSupport.appendChild(canvas);
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	
+
+	var lineWidth = 2,
+			draw = false,
+			cords = [],
+			color,
+			// http://127.0.0.1:8001 for local testing
+			socket = io.connect('http://drawwithfriend.com:8001');
+
+	socket.on('apple', function(data) {
+		drawLine(data.cords, data.lineWidth, data.color);
+	});
+
 	var ifTouch = ('ontouchstart' in window),
 			startEvent = ifTouch ? 'touchstart' : 'mousedown',
 			moveEvent = ifTouch ? 'touchmove' : 'mousemove',
@@ -139,10 +144,10 @@ var canvas = document.getElementById('canvas'),
 	var swatches = document.getElementById('swatches');
 	var colors = ["#2c3e50", "#3498db", "#2ecc71", "#e74c3c", "#9b59b6", "#f1c40f", "#000", "pink"];
 
-	for(var i = 0, j = colors.length; i<j; i++){  // store array length as variable for efficiency. Bit anal I know...
+	for(var i = 0, j = colors.length; i<j; i++){
 		var swatch = document.createElement('li');
 		swatch.style.backgroundColor = colors[i];
-		swatches.appendChild(swatch); // inject swatches into HTML. If add color, increase the $node variable in sass and recompile. 
+		swatches.appendChild(swatch); // inject swatches into HTML. 
 	}
 
 	swatches.addEventListener('click', setSwatch, false);
