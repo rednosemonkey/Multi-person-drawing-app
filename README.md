@@ -1,20 +1,18 @@
 # Multi-person drawing app
 
-A multiperson canvas drawing app using websockets (socket.io) and a node server. A multiperson version of my [drawing app](https://github.com/rednosemonkey/draw). It has support for both touch and mouse. The socket.io website has a message saying that a drawing app example will come, but I built my own in the meantime. I will likely make updates when I see how the socket.io team uses their technology.
+A multiperson canvas drawing app using websockets (socket.io) and a node server. It has support for both touch and mouse, and will work across any device (computer, tablet, and smart phone).
+
+The socket.io website has a message saying that a drawing app example will come, but I built my own in the meantime. I will likely make updates when I see how the socket.io team uses their technology.
+
+Checkout the [live demo site](http://www.drawwithfriend.com/). Open 2 (or more) browser windows and give it a try!
+
+[single person version](https://github.com/rednosemonkey/draw).
 
 ## usage
 
-This app requires a node server to push the drawing changes over (primarily) websockets. As I personally don't have hosting that allows the use of a node server, this code has only been tested locally. As I use a LAMP/WAMP stack, I use an apache server to run the code, and a local node server for the websockets. Without a local apache server, you'll need to setup an express server. Loads of info on the net, or even the socket.io site to show how to do that.
+This app requires a node server.
 
-## Features
+websockets is handled by socket.io and express is used for the framework. The default html preprocessor for express is jade. However, this app is setup for ejs, which allows the use of standard html. The server.js file has been configured to allow the use of .html in the file names, instead of .ejs. A basic template structure has been added to the views folder.
 
-- Drawing changes are shown across all devices open on the same server port.
-- Simple interface for young kids to use.
-- No external dependencies.
-
-## Future changes
-
-- Color changes currently aren't working. Only line thickness. 
-- fix canvas resize on screen orientation
-- remove the need for fastclick.js by adding touch events to buttons for iOS devices.
+Although the app will work on any screen size, the other user's screen size has to be taken into account when drawing. Ie, if drawing on a pc to be seen by someone on a smart phone, only use the top left corner of your screen.
 
