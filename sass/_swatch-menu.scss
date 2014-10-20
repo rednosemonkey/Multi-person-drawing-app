@@ -6,7 +6,7 @@ $timing-function: cubic-bezier(1, 0, 0.755, 1.470);
 	@include center(71px);
 	top: 16px;
 	line-height: 71px;
-	@include background(radial-gradient(circle, slategray, #343434));
+	background: linear-gradient(135deg, slategray, #343434);
 	border-radius: 50%;
 	color: #ecf0f1;
 	text-shadow: 1px 1px 0 rgba(black, 0.8);
@@ -33,7 +33,7 @@ $timing-function: cubic-bezier(1, 0, 0.755, 1.470);
 	pointer-events: none;
 }
 
-li {
+[id="swatches"] li {
 	@include center(75px);
 	list-style: none;
 	border: 1px solid white;
@@ -44,7 +44,7 @@ li {
 	@for $i from 0 through 7 {
 		&:nth-child(#{$i+1}) {
 			
-			.drop-down + ul & {
+			.drop-down + & {
 				transform: translateX((sin($i * 45deg))*100px) translateY(-(cos($i * 45deg))*100px);
 			}
 		}

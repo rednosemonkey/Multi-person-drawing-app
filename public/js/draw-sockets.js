@@ -1,3 +1,56 @@
+// chat function
+function chat(){
+	// var message = document.getElementById('message'),
+	// 		messages = document.getElementById('messages'),
+	// 		form = document.getElementById('form'),
+	// 		newLi = document.createElement('li');
+	// 		chatSocket = io();
+
+	// 	chatSocket.on('message', function(msg){
+	// 		newLi.appendChild(document.createTextNode('Friend: ' + msg));
+	// 		newLi.setAttribute('class', 'message--friend');
+	// 		messages.appendChild(newLi.cloneNode(true));
+	// 	});
+			
+	// form.onsubmit = function(e) {
+	// 	chatSocket.emit('send', message.value);
+	// 	newLi.innerHTML = 'You: ' + message.value;
+	// 	newLi.setAttribute('class', 'message--you');
+	// 	messages.appendChild(newLi.cloneNode(true));
+	// 	message.value = '';
+	// 	e.preventDefault();
+	// };
+
+	var allMessages = [],
+			message = document.getElementById("message"),
+			messageContent = document.getElementById("message-content"),
+			socket = io();
+
+	socket.on('message', function (msg) {
+		allMessages.push(msg.message);
+		var html = '';
+		for(var i = 0, j = allMessages.length; i < j; i++) {
+				html += '<li class="message--friend">' + allMessages[i] + '</li>';
+		}
+		messageContent.innerHTML = html;
+	});
+
+	form.onsubmit = function(e) {
+		socket.emit('send', { message: message.value });
+		allMessages.push(message.value);
+		var html = '';
+		for(var i = 0, j = allMessages.length; i < j; i++) {
+				html += '<li class="message--you">' + allMessages[i] + '</li>';
+		}
+		messageContent.innerHTML = html;
+		message.value = '';
+		e.preventDefault();
+	};
+}
+	
+chat();
+
+//draw function
 	var canvasSupport = document.getElementById('canvas-support'),
 			canvas = document.createElement('canvas'),
 			context = canvas.getContext('2d');
@@ -26,6 +79,7 @@
 	canvas.addEventListener(startEvent, drawStart, false);
 	canvas.addEventListener(moveEvent, drawing, true);
 	canvas.addEventListener(endEvent, endDraw, false);
+
 
 	// function pushLine(data){
 	// 	drawLine(data.cords, data.lineWidth, data.color);
@@ -58,9 +112,9 @@
 		canvas.style.cursor = "default";
 
 		socket.emit('banana', {
-		  cords: cords,
-		  lineWidth: lineWidth,
-		  color: color
+			cords: cords,
+			lineWidth: lineWidth,
+			color: color
 		});
 
 		cords = [];

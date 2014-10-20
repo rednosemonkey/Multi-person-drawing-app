@@ -1,0 +1,361 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.2.14
+3 info using node@v0.8.22
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose read json E:\wamp\www\draw-sockets\package.json
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ 'E:\\wamp\\www\\draw-sockets',
+7 verbose install   [ 'ejs',
+7 verbose install     'express',
+7 verbose install     'socket.io',
+7 verbose install     'redis',
+7 verbose install     'grunt',
+7 verbose install     'grunt-autoprefixer',
+7 verbose install     'grunt-contrib-compass',
+7 verbose install     'grunt-contrib-concat',
+7 verbose install     'grunt-contrib-cssmin',
+7 verbose install     'grunt-contrib-jshint',
+7 verbose install     'grunt-contrib-sass',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-contrib-watch' ] ]
+8 verbose from cache E:\wamp\www\draw-sockets\package.json
+9 info preinstall draw@0.2.0
+10 verbose read json E:\wamp\www\draw-sockets\node_modules\ejs\package.json
+11 verbose read json E:\wamp\www\draw-sockets\node_modules\express\package.json
+12 verbose read json E:\wamp\www\draw-sockets\node_modules\fastclick\package.json
+13 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt\package.json
+14 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-autoprefixer\package.json
+15 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-compass\package.json
+16 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-concat\package.json
+17 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-cssmin\package.json
+18 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-jshint\package.json
+19 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-sass\package.json
+20 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-uglify\package.json
+21 verbose read json E:\wamp\www\draw-sockets\node_modules\grunt-contrib-watch\package.json
+22 verbose read json E:\wamp\www\draw-sockets\node_modules\mongodb\package.json
+23 verbose read json E:\wamp\www\draw-sockets\node_modules\redis\package.json
+24 verbose read json E:\wamp\www\draw-sockets\node_modules\socket.io\package.json
+25 verbose from cache E:\wamp\www\draw-sockets\package.json
+26 verbose readDependencies using package.json deps
+27 verbose from cache E:\wamp\www\draw-sockets\node_modules\ejs\package.json
+28 verbose from cache E:\wamp\www\draw-sockets\node_modules\express\package.json
+29 verbose from cache E:\wamp\www\draw-sockets\node_modules\fastclick\package.json
+30 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt\package.json
+31 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-autoprefixer\package.json
+32 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-compass\package.json
+33 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-concat\package.json
+34 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-cssmin\package.json
+35 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-jshint\package.json
+36 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-sass\package.json
+37 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-uglify\package.json
+38 verbose from cache E:\wamp\www\draw-sockets\node_modules\grunt-contrib-watch\package.json
+39 verbose from cache E:\wamp\www\draw-sockets\node_modules\mongodb\package.json
+40 verbose from cache E:\wamp\www\draw-sockets\node_modules\redis\package.json
+41 verbose from cache E:\wamp\www\draw-sockets\node_modules\socket.io\package.json
+42 verbose already installed skipping ejs@~0.8.5 E:\wamp\www\draw-sockets
+43 verbose already installed skipping express@~4.9.0 E:\wamp\www\draw-sockets
+44 verbose cache add [ 'socket.io@^1.1.0', null ]
+45 verbose cache add name=undefined spec="socket.io@^1.1.0" args=["socket.io@^1.1.0",null]
+46 verbose parsed url { pathname: 'socket.io@^1.1.0',
+46 verbose parsed url   path: 'socket.io@^1.1.0',
+46 verbose parsed url   href: 'socket.io@^1.1.0' }
+47 verbose cache add name="socket.io" spec="^1.1.0" args=["socket.io","^1.1.0"]
+48 verbose parsed url { pathname: '^1.1.0', path: '^1.1.0', href: '^1.1.0' }
+49 verbose addNamed [ 'socket.io', '^1.1.0' ]
+50 verbose addNamed [ null, null ]
+51 verbose already installed skipping redis@* E:\wamp\www\draw-sockets
+52 verbose cache add [ 'grunt@^0.4.5', null ]
+53 verbose cache add name=undefined spec="grunt@^0.4.5" args=["grunt@^0.4.5",null]
+54 verbose parsed url { pathname: 'grunt@^0.4.5',
+54 verbose parsed url   path: 'grunt@^0.4.5',
+54 verbose parsed url   href: 'grunt@^0.4.5' }
+55 verbose cache add name="grunt" spec="^0.4.5" args=["grunt","^0.4.5"]
+56 verbose parsed url { pathname: '^0.4.5', path: '^0.4.5', href: '^0.4.5' }
+57 verbose addNamed [ 'grunt', '^0.4.5' ]
+58 verbose addNamed [ null, null ]
+59 verbose cache add [ 'grunt-autoprefixer@^1.0.0', null ]
+60 verbose cache add name=undefined spec="grunt-autoprefixer@^1.0.0" args=["grunt-autoprefixer@^1.0.0",null]
+61 verbose parsed url { pathname: 'grunt-autoprefixer@^1.0.0',
+61 verbose parsed url   path: 'grunt-autoprefixer@^1.0.0',
+61 verbose parsed url   href: 'grunt-autoprefixer@^1.0.0' }
+62 verbose cache add name="grunt-autoprefixer" spec="^1.0.0" args=["grunt-autoprefixer","^1.0.0"]
+63 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+64 verbose addNamed [ 'grunt-autoprefixer', '^1.0.0' ]
+65 verbose addNamed [ null, null ]
+66 verbose cache add [ 'grunt-contrib-compass@^0.9.1', null ]
+67 verbose cache add name=undefined spec="grunt-contrib-compass@^0.9.1" args=["grunt-contrib-compass@^0.9.1",null]
+68 verbose parsed url { pathname: 'grunt-contrib-compass@^0.9.1',
+68 verbose parsed url   path: 'grunt-contrib-compass@^0.9.1',
+68 verbose parsed url   href: 'grunt-contrib-compass@^0.9.1' }
+69 verbose cache add name="grunt-contrib-compass" spec="^0.9.1" args=["grunt-contrib-compass","^0.9.1"]
+70 verbose parsed url { pathname: '^0.9.1', path: '^0.9.1', href: '^0.9.1' }
+71 verbose addNamed [ 'grunt-contrib-compass', '^0.9.1' ]
+72 verbose addNamed [ null, null ]
+73 verbose cache add [ 'grunt-contrib-concat@^0.4.0', null ]
+74 verbose cache add name=undefined spec="grunt-contrib-concat@^0.4.0" args=["grunt-contrib-concat@^0.4.0",null]
+75 verbose parsed url { pathname: 'grunt-contrib-concat@^0.4.0',
+75 verbose parsed url   path: 'grunt-contrib-concat@^0.4.0',
+75 verbose parsed url   href: 'grunt-contrib-concat@^0.4.0' }
+76 verbose cache add name="grunt-contrib-concat" spec="^0.4.0" args=["grunt-contrib-concat","^0.4.0"]
+77 verbose parsed url { pathname: '^0.4.0', path: '^0.4.0', href: '^0.4.0' }
+78 verbose addNamed [ 'grunt-contrib-concat', '^0.4.0' ]
+79 verbose addNamed [ null, null ]
+80 verbose cache add [ 'grunt-contrib-cssmin@^0.10.0', null ]
+81 verbose cache add name=undefined spec="grunt-contrib-cssmin@^0.10.0" args=["grunt-contrib-cssmin@^0.10.0",null]
+82 verbose parsed url { pathname: 'grunt-contrib-cssmin@^0.10.0',
+82 verbose parsed url   path: 'grunt-contrib-cssmin@^0.10.0',
+82 verbose parsed url   href: 'grunt-contrib-cssmin@^0.10.0' }
+83 verbose cache add name="grunt-contrib-cssmin" spec="^0.10.0" args=["grunt-contrib-cssmin","^0.10.0"]
+84 verbose parsed url { pathname: '^0.10.0', path: '^0.10.0', href: '^0.10.0' }
+85 verbose addNamed [ 'grunt-contrib-cssmin', '^0.10.0' ]
+86 verbose addNamed [ null, null ]
+87 verbose already installed skipping grunt-contrib-jshint@~0.10.0 E:\wamp\www\draw-sockets
+88 verbose cache add [ 'grunt-contrib-sass@^0.8.0', null ]
+89 verbose cache add name=undefined spec="grunt-contrib-sass@^0.8.0" args=["grunt-contrib-sass@^0.8.0",null]
+90 verbose parsed url { pathname: 'grunt-contrib-sass@^0.8.0',
+90 verbose parsed url   path: 'grunt-contrib-sass@^0.8.0',
+90 verbose parsed url   href: 'grunt-contrib-sass@^0.8.0' }
+91 verbose cache add name="grunt-contrib-sass" spec="^0.8.0" args=["grunt-contrib-sass","^0.8.0"]
+92 verbose parsed url { pathname: '^0.8.0', path: '^0.8.0', href: '^0.8.0' }
+93 verbose addNamed [ 'grunt-contrib-sass', '^0.8.0' ]
+94 verbose addNamed [ null, null ]
+95 verbose already installed skipping grunt-contrib-uglify@~0.4.0 E:\wamp\www\draw-sockets
+96 verbose cache add [ 'grunt-contrib-watch@^0.6.1', null ]
+97 verbose cache add name=undefined spec="grunt-contrib-watch@^0.6.1" args=["grunt-contrib-watch@^0.6.1",null]
+98 verbose parsed url { pathname: 'grunt-contrib-watch@^0.6.1',
+98 verbose parsed url   path: 'grunt-contrib-watch@^0.6.1',
+98 verbose parsed url   href: 'grunt-contrib-watch@^0.6.1' }
+99 verbose cache add name="grunt-contrib-watch" spec="^0.6.1" args=["grunt-contrib-watch","^0.6.1"]
+100 verbose parsed url { pathname: '^0.6.1', path: '^0.6.1', href: '^0.6.1' }
+101 verbose addNamed [ 'grunt-contrib-watch', '^0.6.1' ]
+102 verbose addNamed [ null, null ]
+103 silly lockFile 3f384752-socket-io-1-1-0 socket.io@^1.1.0
+104 verbose lock socket.io@^1.1.0 C:\Users\Nick\AppData\Roaming\npm-cache\3f384752-socket-io-1-1-0.lock
+105 silly lockFile 3a879aa2-grunt-autoprefixer-1-0-0 grunt-autoprefixer@^1.0.0
+106 verbose lock grunt-autoprefixer@^1.0.0 C:\Users\Nick\AppData\Roaming\npm-cache\3a879aa2-grunt-autoprefixer-1-0-0.lock
+107 silly lockFile 73541f84-grunt-0-4-5 grunt@^0.4.5
+108 verbose lock grunt@^0.4.5 C:\Users\Nick\AppData\Roaming\npm-cache\73541f84-grunt-0-4-5.lock
+109 silly lockFile c0237989-grunt-contrib-compass-0-9-1 grunt-contrib-compass@^0.9.1
+110 verbose lock grunt-contrib-compass@^0.9.1 C:\Users\Nick\AppData\Roaming\npm-cache\c0237989-grunt-contrib-compass-0-9-1.lock
+111 silly lockFile cce3fe1f-grunt-contrib-concat-0-4-0 grunt-contrib-concat@^0.4.0
+112 verbose lock grunt-contrib-concat@^0.4.0 C:\Users\Nick\AppData\Roaming\npm-cache\cce3fe1f-grunt-contrib-concat-0-4-0.lock
+113 silly lockFile 27341b2e-grunt-contrib-cssmin-0-10-0 grunt-contrib-cssmin@^0.10.0
+114 verbose lock grunt-contrib-cssmin@^0.10.0 C:\Users\Nick\AppData\Roaming\npm-cache\27341b2e-grunt-contrib-cssmin-0-10-0.lock
+115 silly lockFile b7be9580-grunt-contrib-sass-0-8-0 grunt-contrib-sass@^0.8.0
+116 verbose lock grunt-contrib-sass@^0.8.0 C:\Users\Nick\AppData\Roaming\npm-cache\b7be9580-grunt-contrib-sass-0-8-0.lock
+117 silly lockFile 224b1ece-grunt-contrib-watch-0-6-1 grunt-contrib-watch@^0.6.1
+118 verbose lock grunt-contrib-watch@^0.6.1 C:\Users\Nick\AppData\Roaming\npm-cache\224b1ece-grunt-contrib-watch-0-6-1.lock
+119 info addNameTag [ 'socket.io', '^1.1.0' ]
+120 info addNameTag [ 'grunt-autoprefixer', '^1.0.0' ]
+121 verbose url raw socket.io
+122 verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+123 verbose url resolved https://registry.npmjs.org/socket.io
+124 info trying registry request attempt 1 at 15:42:46
+125 http GET https://registry.npmjs.org/socket.io
+126 info addNameTag [ 'grunt-contrib-compass', '^0.9.1' ]
+127 info addNameTag [ 'grunt-contrib-cssmin', '^0.10.0' ]
+128 info addNameTag [ 'grunt', '^0.4.5' ]
+129 verbose url raw grunt-autoprefixer
+130 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-autoprefixer' ]
+131 verbose url resolved https://registry.npmjs.org/grunt-autoprefixer
+132 info trying registry request attempt 1 at 15:42:46
+133 http GET https://registry.npmjs.org/grunt-autoprefixer
+134 info addNameTag [ 'grunt-contrib-concat', '^0.4.0' ]
+135 info addNameTag [ 'grunt-contrib-sass', '^0.8.0' ]
+136 info addNameTag [ 'grunt-contrib-watch', '^0.6.1' ]
+137 verbose url raw grunt-contrib-compass
+138 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-compass' ]
+139 verbose url resolved https://registry.npmjs.org/grunt-contrib-compass
+140 info trying registry request attempt 1 at 15:42:46
+141 http GET https://registry.npmjs.org/grunt-contrib-compass
+142 verbose url raw grunt-contrib-cssmin
+143 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-cssmin' ]
+144 verbose url resolved https://registry.npmjs.org/grunt-contrib-cssmin
+145 info trying registry request attempt 1 at 15:42:46
+146 http GET https://registry.npmjs.org/grunt-contrib-cssmin
+147 verbose url raw grunt
+148 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+149 verbose url resolved https://registry.npmjs.org/grunt
+150 info trying registry request attempt 1 at 15:42:46
+151 http GET https://registry.npmjs.org/grunt
+152 verbose url raw grunt-contrib-concat
+153 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-concat' ]
+154 verbose url resolved https://registry.npmjs.org/grunt-contrib-concat
+155 info trying registry request attempt 1 at 15:42:46
+156 http GET https://registry.npmjs.org/grunt-contrib-concat
+157 verbose url raw grunt-contrib-sass
+158 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-sass' ]
+159 verbose url resolved https://registry.npmjs.org/grunt-contrib-sass
+160 info trying registry request attempt 1 at 15:42:46
+161 http GET https://registry.npmjs.org/grunt-contrib-sass
+162 verbose url raw grunt-contrib-watch
+163 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-watch' ]
+164 verbose url resolved https://registry.npmjs.org/grunt-contrib-watch
+165 info trying registry request attempt 1 at 15:42:46
+166 http GET https://registry.npmjs.org/grunt-contrib-watch
+167 http 200 https://registry.npmjs.org/grunt-contrib-cssmin
+168 silly registry.get cb [ 200,
+168 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+168 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+168 silly registry.get     etag: '"AUMOMAYVKLFBKXYMI9MAIVMWZ"',
+168 silly registry.get     'content-type': 'application/json',
+168 silly registry.get     'cache-control': 'max-age=60',
+168 silly registry.get     'content-length': '24379',
+168 silly registry.get     'accept-ranges': 'bytes',
+168 silly registry.get     via: '1.1 varnish',
+168 silly registry.get     age: '54',
+168 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+168 silly registry.get     'x-cache': 'HIT',
+168 silly registry.get     'x-cache-hits': '6',
+168 silly registry.get     'x-timer': 'S1413528170.452579,VS0,VE0',
+168 silly registry.get     vary: 'Accept',
+168 silly registry.get     'keep-alive': 'timeout=10, max=50',
+168 silly registry.get     connection: 'Keep-Alive' } ]
+169 http 200 https://registry.npmjs.org/grunt
+170 silly registry.get cb [ 200,
+170 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+170 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+170 silly registry.get     etag: '"4JEXEOK6CKY9CY963I8VZMLCD"',
+170 silly registry.get     'content-type': 'application/json',
+170 silly registry.get     'cache-control': 'max-age=60',
+170 silly registry.get     'content-length': '87147',
+170 silly registry.get     'accept-ranges': 'bytes',
+170 silly registry.get     via: '1.1 varnish',
+170 silly registry.get     age: '54',
+170 silly registry.get     'x-served-by': 'cache-ty66-TYO',
+170 silly registry.get     'x-cache': 'HIT',
+170 silly registry.get     'x-cache-hits': '7',
+170 silly registry.get     'x-timer': 'S1413528170.443337,VS0,VE0',
+170 silly registry.get     vary: 'Accept',
+170 silly registry.get     'keep-alive': 'timeout=10, max=50',
+170 silly registry.get     connection: 'Keep-Alive' } ]
+171 http 200 https://registry.npmjs.org/grunt-contrib-concat
+172 silly registry.get cb [ 200,
+172 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+172 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+172 silly registry.get     etag: '"9FLDHDJDXOQHP4IXWCCMTQQXK"',
+172 silly registry.get     'content-type': 'application/json',
+172 silly registry.get     'cache-control': 'max-age=60',
+172 silly registry.get     'content-length': '27863',
+172 silly registry.get     'accept-ranges': 'bytes',
+172 silly registry.get     via: '1.1 varnish',
+172 silly registry.get     age: '5',
+172 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+172 silly registry.get     'x-cache': 'HIT',
+172 silly registry.get     'x-cache-hits': '2',
+172 silly registry.get     'x-timer': 'S1413528170.487604,VS0,VE0',
+172 silly registry.get     vary: 'Accept',
+172 silly registry.get     'keep-alive': 'timeout=10, max=49',
+172 silly registry.get     connection: 'Keep-Alive' } ]
+173 http 200 https://registry.npmjs.org/socket.io
+174 silly registry.get cb [ 200,
+174 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+174 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+174 silly registry.get     etag: '"4DWHD00J2Q5ZD01NB01DHICSR"',
+174 silly registry.get     'content-type': 'application/json',
+174 silly registry.get     'cache-control': 'max-age=60',
+174 silly registry.get     'content-length': '98781',
+174 silly registry.get     'accept-ranges': 'bytes',
+174 silly registry.get     via: '1.1 varnish',
+174 silly registry.get     age: '52',
+174 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+174 silly registry.get     'x-cache': 'HIT',
+174 silly registry.get     'x-cache-hits': '5',
+174 silly registry.get     'x-timer': 'S1413528170.477159,VS0,VE0',
+174 silly registry.get     vary: 'Accept',
+174 silly registry.get     'keep-alive': 'timeout=10, max=50',
+174 silly registry.get     connection: 'Keep-Alive' } ]
+175 http 200 https://registry.npmjs.org/grunt-contrib-compass
+176 silly registry.get cb [ 200,
+176 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+176 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+176 silly registry.get     etag: '"9ICOISMTLDE04889HK7ILBLN4"',
+176 silly registry.get     'content-type': 'application/json',
+176 silly registry.get     'cache-control': 'max-age=60',
+176 silly registry.get     'content-length': '46577',
+176 silly registry.get     'accept-ranges': 'bytes',
+176 silly registry.get     via: '1.1 varnish',
+176 silly registry.get     age: '34',
+176 silly registry.get     'x-served-by': 'cache-ty68-TYO',
+176 silly registry.get     'x-cache': 'HIT',
+176 silly registry.get     'x-cache-hits': '1',
+176 silly registry.get     'x-timer': 'S1413528170.489169,VS0,VE0',
+176 silly registry.get     vary: 'Accept',
+176 silly registry.get     'keep-alive': 'timeout=10, max=50',
+176 silly registry.get     connection: 'Keep-Alive' } ]
+177 http 200 https://registry.npmjs.org/grunt-autoprefixer
+178 silly registry.get cb [ 200,
+178 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+178 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+178 silly registry.get     etag: '"3ZO0X5PCBELFDVTDSTT0MI8EB"',
+178 silly registry.get     'content-type': 'application/json',
+178 silly registry.get     'cache-control': 'max-age=60',
+178 silly registry.get     'content-length': '52139',
+178 silly registry.get     'accept-ranges': 'bytes',
+178 silly registry.get     via: '1.1 varnish',
+178 silly registry.get     age: '56',
+178 silly registry.get     'x-served-by': 'cache-ty68-TYO',
+178 silly registry.get     'x-cache': 'HIT',
+178 silly registry.get     'x-cache-hits': '5',
+178 silly registry.get     'x-timer': 'S1413528170.488145,VS0,VE0',
+178 silly registry.get     vary: 'Accept',
+178 silly registry.get     'keep-alive': 'timeout=10, max=50',
+178 silly registry.get     connection: 'Keep-Alive' } ]
+179 http 200 https://registry.npmjs.org/grunt-contrib-sass
+180 silly registry.get cb [ 200,
+180 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+180 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+180 silly registry.get     etag: '"7C9TPN1VWX3YGTCXLYTF71XPH"',
+180 silly registry.get     'content-type': 'application/json',
+180 silly registry.get     'cache-control': 'max-age=60',
+180 silly registry.get     'content-length': '41110',
+180 silly registry.get     'accept-ranges': 'bytes',
+180 silly registry.get     via: '1.1 varnish',
+180 silly registry.get     age: '55',
+180 silly registry.get     'x-served-by': 'cache-ty66-TYO',
+180 silly registry.get     'x-cache': 'HIT',
+180 silly registry.get     'x-cache-hits': '2',
+180 silly registry.get     'x-timer': 'S1413528170.512783,VS0,VE0',
+180 silly registry.get     vary: 'Accept',
+180 silly registry.get     'keep-alive': 'timeout=10, max=49',
+180 silly registry.get     connection: 'Keep-Alive' } ]
+181 http 200 https://registry.npmjs.org/grunt-contrib-watch
+182 silly registry.get cb [ 200,
+182 silly registry.get   { date: 'Fri, 17 Oct 2014 06:42:50 GMT',
+182 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+182 silly registry.get     etag: '"269BOW72EI5QIWPUVGY0ZQEPT"',
+182 silly registry.get     'content-type': 'application/json',
+182 silly registry.get     'cache-control': 'max-age=60',
+182 silly registry.get     'content-length': '59818',
+182 silly registry.get     'accept-ranges': 'bytes',
+182 silly registry.get     via: '1.1 varnish',
+182 silly registry.get     age: '54',
+182 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+182 silly registry.get     'x-cache': 'HIT',
+182 silly registry.get     'x-cache-hits': '3',
+182 silly registry.get     'x-timer': 'S1413528170.538843,VS0,VE0',
+182 silly registry.get     vary: 'Accept',
+182 silly registry.get     'keep-alive': 'timeout=10, max=48',
+182 silly registry.get     connection: 'Keep-Alive' } ]
+183 silly lockFile 27341b2e-grunt-contrib-cssmin-0-10-0 grunt-contrib-cssmin@^0.10.0
+184 silly lockFile 27341b2e-grunt-contrib-cssmin-0-10-0 grunt-contrib-cssmin@^0.10.0
+185 error Error: No compatible version found: grunt-contrib-cssmin@'^0.10.0'
+185 error Valid install targets:
+185 error ["0.4.0","0.4.1","0.4.2","0.5.0","0.6.0","0.6.1","0.6.2","0.7.0","0.8.0","0.9.0","0.10.0"]
+185 error     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache.js:682:10)
+185 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache.js:597:10
+185 error     at saved (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:138:7)
+185 error     at Object.oncomplete (fs.js:297:15)
+186 error If you need help, you may report this log at:
+186 error     <http://github.com/isaacs/npm/issues>
+186 error or email it to:
+186 error     <npm-@googlegroups.com>
+187 error System Windows_NT 6.1.7601
+188 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+189 error cwd E:\wamp\www\draw-sockets
+190 error node -v v0.8.22
+191 error npm -v 1.2.14
+192 verbose exit [ 1, true ]
