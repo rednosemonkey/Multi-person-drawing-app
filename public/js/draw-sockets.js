@@ -30,7 +30,7 @@ function chat(){
 		allMessages.push(msg.message);
 		var html = '';
 		for(var i = 0, j = allMessages.length; i < j; i++) {
-				html += '<li class="message--friend">' + allMessages[i] + '</li>';
+				html += '<li>' + allMessages[i] + '</li>';
 		}
 		messageContent.innerHTML = html;
 	});
@@ -40,7 +40,7 @@ function chat(){
 		allMessages.push(message.value);
 		var html = '';
 		for(var i = 0, j = allMessages.length; i < j; i++) {
-				html += '<li class="message--you">' + allMessages[i] + '</li>';
+				html += '<li>' + allMessages[i] + '</li>';
 		}
 		messageContent.innerHTML = html;
 		message.value = '';

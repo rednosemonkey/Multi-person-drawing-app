@@ -19,7 +19,7 @@ io.sockets.on('connection', function(socket) {
   socket.on('banana', function(data) {
     socket.broadcast.emit('apple', data);
 	});
-	socket.emit('message', { message: 'welcome to the chat' });
+	// socket.emit('message', { message: 'Something to say?' });
 	 socket.on('send', function(msg){
     socket.broadcast.emit('message', msg);
   });
@@ -28,8 +28,3 @@ io.sockets.on('connection', function(socket) {
 server.listen(port, function(){
   console.log("Listening on port " + port);
 });
-
-// socket.emit('message', { message: 'welcome to the chat' });
-//     socket.on('send', function (msg) {
-//         socket.broadcast.emit('message', msg);
-//     });

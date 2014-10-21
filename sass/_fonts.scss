@@ -1,3 +1,6 @@
+$primary-color: #ecf0f1;
+$secondary-color: #333;
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?-j7hq7v');
@@ -18,7 +21,7 @@
 	text-transform: none;
 	line-height: 1;
 	color: white;
-	font-size: 32px;
+	font-size: 2em;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
@@ -39,4 +42,13 @@
 
 .icon-remove:before {
 	content: "\e603";
+}
+
+.icon-checkmark {
+	font-size: 1em;
+
+	&:before {
+		content: "\e604";
+		color: $secondary-color;
+	}
 }

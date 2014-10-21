@@ -8,7 +8,7 @@ $timing-function: cubic-bezier(1, 0, 0.755, 1.470);
 	line-height: 71px;
 	background: linear-gradient(135deg, slategray, #343434);
 	border-radius: 50%;
-	color: #ecf0f1;
+	color: $primary-color;
 	text-shadow: 1px 1px 0 rgba(black, 0.8);
 	text-align: center;
 	cursor: pointer;

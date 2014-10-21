@@ -10,11 +10,9 @@
     	<input type="range" min="1" max="20" value="2" step="1" onchange="updateLineWidth(value)" class="vertical" orient="vertical" id="rangeSlider">
     </nav>
     <div id="canvas-support"></div>
-
     <ul id="message-content"></ul>
-    <!-- <div id="content"></div> -->
     <form action="" id="form">
-      <input id="message" autocomplete="off"><button id="send">Send</button>
+      <input id="message" autocomplete="off" placeholder="Something to say?"><button id="send" class="icon-checkmark"></button>
     </form>
     
     <% include scripts.html %>
