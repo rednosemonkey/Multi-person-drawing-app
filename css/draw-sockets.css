@@ -43,11 +43,17 @@
 
 /* line 47, ../sass/_fonts.scss */
 .icon-checkmark {
+  position: relative;
   font-size: 1em;
 }
-/* line 50, ../sass/_fonts.scss */
+/* line 51, ../sass/_fonts.scss */
 .icon-checkmark:before {
   content: "\e604";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #333333;
 }
 
@@ -64,6 +70,11 @@ body {
           text-size-adjust: 100%;
   margin: 0;
   background: url("../img/handmadepaper.min.png");
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   /* line 5, ../sass/_framework.scss */
@@ -73,7 +84,7 @@ body {
   }
 }
 
-/* line 17, ../sass/_framework.scss */
+/* line 19, ../sass/_framework.scss */
 canvas {
   display: block;
 }
@@ -354,7 +365,7 @@ form input {
   vertical-align: middle;
   border: 0;
   padding: 0 10px;
-  width: 90%;
+  width: 88%;
   min-height: 32px;
   min-height: 2rem;
   background-color: #4d4d4d;
@@ -381,14 +392,12 @@ form button {
 [id="message-content"] {
   overflow-y: hidden;
   width: 100%;
-  max-height: 6.3em;
   list-style-type: none;
-  margin-left: 5px;
-  padding: 0;
+  padding-left: 5px;
   position: absolute;
   bottom: 2.1875em;
 }
-/* line 47, ../sass/_chat.scss */
+/* line 45, ../sass/_chat.scss */
 [id="message-content"] li {
   display: inline-block;
   float: left;
@@ -396,5 +405,53 @@ form button {
   margin: 2px 0;
   padding: 5px 10px;
   border-radius: 2em;
-  border: 1px solid gray;
+  border: 1px solid #ddd;
+}
+/* line 58, ../sass/_chat.scss */
+[id="message-content"] li:last-child {
+  border: 1px solid #e74c3c;
+  -webkit-animation: fade-in-left 500ms ease-out;
+          animation: fade-in-left 500ms ease-out;
+}
+
+@-webkit-keyframes fade-in-left {
+  /* line 66, ../sass/_chat.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+
+  /* line 71, ../sass/_chat.scss */
+  50% {
+    border: 1px solid #e74c3c;
+  }
+
+  /* line 75, ../sass/_chat.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-left {
+  /* line 66, ../sass/_chat.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+
+  /* line 71, ../sass/_chat.scss */
+  50% {
+    border: 1px solid #e74c3c;
+  }
+
+  /* line 75, ../sass/_chat.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }

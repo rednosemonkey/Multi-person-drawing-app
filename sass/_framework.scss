@@ -7,6 +7,8 @@ body {
 	text-size-adjust: 100%; 
 	margin: 0;
 	background: url("../img/handmadepaper.min.png");
+	user-select: none;
+	-webkit-touch-callout: none;
 
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 		background: url("../img/handmadepaper@2x.min.png");

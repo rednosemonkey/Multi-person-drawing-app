@@ -29,8 +29,16 @@ function chat(){
 	socket.on('message', function (msg) {
 		allMessages.push(msg.message);
 		var html = '';
-		for(var i = 0, j = allMessages.length; i < j; i++) {
-				html += '<li>' + allMessages[i] + '</li>';
+
+		if(allMessages.length <= 3) {
+			for(var i = 0, j = allMessages.length; i < j; i++) {
+					html += '<li>' + allMessages[i] + '</li>';
+			}
+		} else {
+			allMessages.shift(msg.message);
+			for(var i = 0, j = allMessages.length; i < j; i++) {
+					html += '<li>' + allMessages[i] + '</li>';
+			}
 		}
 		messageContent.innerHTML = html;
 	});
@@ -39,8 +47,16 @@ function chat(){
 		socket.emit('send', { message: message.value });
 		allMessages.push(message.value);
 		var html = '';
-		for(var i = 0, j = allMessages.length; i < j; i++) {
-				html += '<li>' + allMessages[i] + '</li>';
+		
+		if(allMessages.length <= 3) {
+			for(var i = 0, j = allMessages.length; i < j; i++) {
+					html += '<li>' + allMessages[i] + '</li>';
+			}
+		} else {
+			allMessages.shift(message.value);
+			for(var i = 0, j = allMessages.length; i < j; i++) {
+					html += '<li>' + allMessages[i] + '</li>';
+			}
 		}
 		messageContent.innerHTML = html;
 		message.value = '';
@@ -64,7 +80,7 @@ chat();
 			draw = false,
 			cords = [],
 			color,
-			// http://127.0.0.1:8001 for local testing
+			// http://127.0.0.1:8001 for local testing  http://drawwithfriend.com:8001
 			socket = io.connect('http://drawwithfriend.com:8001');
 
 	socket.on('apple', function(data) {

@@ -45,10 +45,15 @@ $secondary-color: #333;
 }
 
 .icon-checkmark {
+	position: relative;
 	font-size: 1em;
 
 	&:before {
 		content: "\e604";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		color: $secondary-color;
 	}
 }
