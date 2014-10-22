@@ -1,6 +1,6 @@
 # Multi-person drawing app
 
-A multiperson canvas drawing app using websockets (socket.io) and a node server. It has support for both touch and mouse, and will work across any device (computer, tablet, and smart phone).
+A multiperson canvas drawing app with messaging/chat functionality. using websockets (socket.io) and a node server. It has support for both touch and mouse, and will work across any device (computer, tablet, and smart phone).
 
 The socket.io website has a message saying that a drawing app example will come, but I built my own in the meantime. I will likely make updates when I see how the socket.io team uses their technology.
 
