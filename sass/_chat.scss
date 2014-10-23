@@ -47,8 +47,8 @@ form {
 		float: left;
 		clear: left;
 		margin: 2px 0;
-		padding: 5px 10px; 
-		border-radius: 2em;
+		padding: 3px 10px; 
+		border-radius: 4px;
 		border: 1px solid #ddd;
 
 		// &:first-child {
@@ -56,7 +56,6 @@ form {
 		// }
 
 		&:last-child {
-			border: 1px solid #e74c3c;
 			animation: fade-in-left 500ms ease-out;
 		}
 	}
@@ -69,7 +68,7 @@ form {
 	}
 
 	50% {
-		border: 1px solid #e74c3c; 
+		background: rgba(#e74c3c, 0.5);
 	}
 
 	100% { 

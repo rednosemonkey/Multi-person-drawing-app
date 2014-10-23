@@ -1,5 +1,5 @@
 // chat function
-function chat(){
+
 	// var message = document.getElementById('message'),
 	// 		messages = document.getElementById('messages'),
 	// 		form = document.getElementById('form'),
@@ -24,7 +24,8 @@ function chat(){
 	var allMessages = [],
 			message = document.getElementById("message"),
 			messageContent = document.getElementById("message-content"),
-			socket = io();
+			socket = io.connect('http://drawwithfriend.com:8001');
+			// socket = io();
 
 	socket.on('message', function (msg) {
 		allMessages.push(msg.message);
@@ -47,7 +48,7 @@ function chat(){
 		socket.emit('send', { message: message.value });
 		allMessages.push(message.value);
 		var html = '';
-		
+
 		if(allMessages.length <= 3) {
 			for(var i = 0, j = allMessages.length; i < j; i++) {
 					html += '<li>' + allMessages[i] + '</li>';
@@ -62,9 +63,7 @@ function chat(){
 		message.value = '';
 		e.preventDefault();
 	};
-}
-	
-chat();
+
 
 //draw function
 	var canvasSupport = document.getElementById('canvas-support'),
