@@ -1,32 +1,11 @@
-// chat function
-
-	// var message = document.getElementById('message'),
-	// 		messages = document.getElementById('messages'),
-	// 		form = document.getElementById('message-box'),
-	// 		newLi = document.createElement('li');
-	// 		chatSocket = io();
-
-	// 	chatSocket.on('message', function(msg){
-	// 		newLi.appendChild(document.createTextNode('Friend: ' + msg));
-	// 		newLi.setAttribute('class', 'message--friend');
-	// 		messages.appendChild(newLi.cloneNode(true));
-	// 	});
-
-	// form.onsubmit = function(e) {
-	// 	chatSocket.emit('send', message.value);
-	// 	newLi.innerHTML = 'You: ' + message.value;
-	// 	newLi.setAttribute('class', 'message--you');
-	// 	messages.appendChild(newLi.cloneNode(true));
-	// 	message.value = '';
-	// 	e.preventDefault();
-	// };
+window.onload = function(){
+	"use strict";
 
 	var allMessages = [],
 			message = document.getElementById("message"),
 			messageContent = document.getElementById("message-content"),
 			form = document.getElementById('message-box'),
 			socket = io.connect('http://drawwithfriend.com:8001');
-			// socket = io();
 
 	socket.on('message', function (msg) {
 		allMessages.push(msg.message);
@@ -65,7 +44,6 @@
 		e.preventDefault();
 	};
 
-
 //draw function
 	var canvasSupport = document.getElementById('canvas-support'),
 			canvas = document.createElement('canvas'),
@@ -80,7 +58,7 @@
 			draw = false,
 			cords = [],
 			color,
-			// http://127.0.0.1:8001 for local testing  http://drawwithfriend.com:8001
+			// http://127.0.0.1:8001 for local testing
 			socket = io.connect('http://drawwithfriend.com:8001');
 
 	socket.on('apple', function(data) {
@@ -95,7 +73,6 @@
 	canvas.addEventListener(startEvent, drawStart, false);
 	canvas.addEventListener(moveEvent, drawing, true);
 	canvas.addEventListener(endEvent, endDraw, false);
-
 
 	// function pushLine(data){
 	// 	drawLine(data.cords, data.lineWidth, data.color);
@@ -152,11 +129,9 @@
 
 // Change brush type
 
-	var	brushTypeBtn = document.getElementById('brush-type'),
-			brushSizeBtn = document.getElementById('rangeSlider');
+	var	brushTypeBtn = document.getElementById('brush-type');
 
 	brushTypeBtn.addEventListener('click', changeBrushType, false);
-	brushSizeBtn.addEventListener('click', toggleRangeSlider, false);
 
 	context.shadowBlur = Math.round(lineWidth / 3);
 
@@ -174,19 +149,24 @@
 
 // change line width
 
-	var lineWithOutput = document.getElementById('line-width');
+	var lineWithOutput = document.getElementById('line-width'),
+			brushSizeBtn = document.getElementById('rangeSlider');
+
+	brushSizeBtn.addEventListener('click', toggleRangeSlider, false);
+	brushSizeBtn.addEventListener('change', updateLineWidth, false);
 
 	lineWithOutput.innerHTML = lineWidth;
 
 	function updateLineWidth(newSize) {
-	 lineWithOutput.innerHTML = newSize;
-	 lineWidth = newSize;
-	 if (brushTypeBtn.classList.contains('icon-pen')) {
-		 context.shadowBlur = Math.round(newSize / 3);
+		newSize = brushSizeBtn.value;
+		lineWithOutput.innerHTML = newSize;
+		lineWidth = newSize;
+		if (brushTypeBtn.classList.contains('icon-pen')) {
+			context.shadowBlur = Math.round(newSize / 3);
 		}
 	}
 
-	function toggleRangeSlider(){
+	function toggleRangeSlider() {
 		brushSizeBtn.classList.toggle('show-slider');
 	}
 
@@ -271,3 +251,5 @@ setSwatch( { target: swatches.querySelector('li') } );
 
 		window.open(data, '_blank', 'location=0, menubar=0');
 	}
+
+}
