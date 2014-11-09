@@ -2,7 +2,7 @@
 
 	// var message = document.getElementById('message'),
 	// 		messages = document.getElementById('messages'),
-	// 		form = document.getElementById('form'),
+	// 		form = document.getElementById('message-box'),
 	// 		newLi = document.createElement('li');
 	// 		chatSocket = io();
 
@@ -11,7 +11,7 @@
 	// 		newLi.setAttribute('class', 'message--friend');
 	// 		messages.appendChild(newLi.cloneNode(true));
 	// 	});
-			
+
 	// form.onsubmit = function(e) {
 	// 	chatSocket.emit('send', message.value);
 	// 	newLi.innerHTML = 'You: ' + message.value;
@@ -24,6 +24,7 @@
 	var allMessages = [],
 			message = document.getElementById("message"),
 			messageContent = document.getElementById("message-content"),
+			form = document.getElementById('message-box'),
 			socket = io.connect('http://drawwithfriend.com:8001');
 			// socket = io();
 
@@ -103,7 +104,7 @@
 	// function pushColor(data){
 	// 	setColor(data.color);
 	// }
-	
+
 	function drawing(e){
 		if (!draw) return;
 		var x = ifTouch ? (e.targetTouches[0].pageX - canvas.offsetLeft) : (e.offsetX || e.layerX - canvas.offsetLeft);
@@ -116,12 +117,12 @@
 
 		drawLine(cords, lineWidth, color) //draws on own canvas
 	}
-	
+
 	function drawStart(e){
 		e.preventDefault();
 		draw = true;
 	}
-	
+
 	function endDraw(){
 		draw = false;
 		canvas.style.cursor = "default";
@@ -134,7 +135,7 @@
 
 		cords = [];
 	}
-		 
+
 	function drawLine(cords, lineWidth, color){
 		canvas.style.cursor = "crosshair";
 		context.beginPath();
@@ -149,7 +150,7 @@
 	}
 
 
-// Change brush type	
+// Change brush type
 
 	var	brushTypeBtn = document.getElementById('brush-type'),
 			brushSizeBtn = document.getElementById('rangeSlider');
@@ -169,7 +170,7 @@
 			brushTypeBtn.classList.add('icon-pencil');
 			context.shadowBlur = 0;
 		}
-	}	
+	}
 
 // change line width
 
@@ -190,7 +191,7 @@
 	}
 
 	// color button menu and change line color
-	
+
 	var menuButton = document.getElementById('color-menu-button'),
 			drop = document.getElementsByClassName('drop-down')[0],
 			rise = document.getElementsByClassName('rise-up')[0],
@@ -206,7 +207,7 @@
 		} else {
 			menuButtonBg.classList.add('open-whole');
 			menuButton.classList.remove('rise-up');
-			menuButton.classList.add('drop-down');  
+			menuButton.classList.add('drop-down');
 		}
 	}
 
@@ -216,7 +217,7 @@
 	for(var i = 0, j = colors.length; i<j; i++){
 		var swatch = document.createElement('li');
 		swatch.style.backgroundColor = colors[i];
-		swatches.appendChild(swatch); // inject swatches into HTML. 
+		swatches.appendChild(swatch); // inject swatches into HTML.
 	}
 
 	swatches.addEventListener('click', setSwatch, false);
@@ -229,8 +230,8 @@
 
 		if(selected){
 			selected.classList.remove('selected');
-		} 
-		
+		}
+
 		if(target.nodeName.toLowerCase() === 'li'){
 			target.classList.toggle('selected');
 			if (menuButton.classList.contains('drop-down')) {
@@ -267,6 +268,6 @@ setSwatch( { target: swatches.querySelector('li') } );
 
 	function saveImage(){
 		var data = canvas.toDataURL();
-		
+
 		window.open(data, '_blank', 'location=0, menubar=0');
-	} 
+	}

@@ -1,6 +1,6 @@
 .brush-size {
 	top: 4px;
-	right: 5px; 
+	right: 5px;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
@@ -16,8 +16,8 @@ input[type="range"] {
 	-webkit-appearance: none;
 	z-index: -1;
 	margin: 0;
-	top: 98px; 
-	right: -50px; 
+	top: 98px;
+	right: -50px;
 	outline: none;
 	background-color: #ccc;
 	border-radius: 25px;
@@ -25,7 +25,7 @@ input[type="range"] {
 	height: 50px;
 	transform: rotate(-90deg) translateY(50px);
 	transition: transform 300ms $timing-function;
-	
+
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		background-color: #666;

@@ -337,7 +337,7 @@ input[type="range"] {
   -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.755, 1.47);
           transition: transform 300ms cubic-bezier(1, 0, 0.755, 1.47);
 }
-/* line 29, ../sass/_brush-slider.scss */
+/* line 31, ../sass/_brush-slider.scss */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: #666;
@@ -345,14 +345,14 @@ input[type="range"]::-webkit-slider-thumb {
   height: 50px;
   border-radius: 50%;
 }
-/* line 37, ../sass/_brush-slider.scss */
+/* line 39, ../sass/_brush-slider.scss */
 input[type="range"].show-slider {
   -webkit-transform: rotate(-90deg) translateY(0);
           transform: rotate(-90deg) translateY(0);
 }
 
 /* line 1, ../sass/_chat.scss */
-form {
+form[id="message-box"] {
   position: fixed;
   bottom: 0;
   padding: 5px;
@@ -360,7 +360,7 @@ form {
   background-color: #333333;
 }
 /* line 8, ../sass/_chat.scss */
-form input {
+form[id="message-box"] input {
   display: inline-block;
   vertical-align: middle;
   border: 0;
@@ -374,7 +374,7 @@ form input {
   color: #ecf0f1;
 }
 /* line 22, ../sass/_chat.scss */
-form button {
+form[id="message-box"] button {
   display: inline-block;
   vertical-align: middle;
   width: 9%;
